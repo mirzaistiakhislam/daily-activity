@@ -1,0 +1,22 @@
+.header {
+    height: 80px;
+    background-color: #1c2b35;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.website-name {
+    padding-left: 20px;
+    color: aliceblue;
+}
+
+.icon {
+    font-size: 50px;
+    margin-top: 12px;
+    color: orangered;
+}
+
+.icon:hover {
+    color: red;
+}
