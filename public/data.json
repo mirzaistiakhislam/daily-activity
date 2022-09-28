@@ -1,0 +1,38 @@
+[
+    {
+        "id": "6334b650ec038613d3b715b5",
+        "picture": "https://i.ibb.co/0XTyGFv/facebook.jpg",
+        "time": 159,
+        "name": "Facebooking"
+    },
+    {
+        "id": "6334b65006fe76189100bc9e",
+        "picture": "https://i.ibb.co/RvJxkpq/pes.png",
+        "time": 359,
+        "name": "Playing PES"
+    },
+    {
+        "id": "6334b650d227e282d3690111",
+        "picture": "https://i.ibb.co/7Kzz7Zy/cricket.jpg",
+        "time": 56,
+        "name": "Playing Cricket"
+    },
+    {
+        "id": "6334b6504d76c09811ddf739",
+        "picture": "https://i.ibb.co/ggLsWY5/anime.jpg",
+        "time": 183,
+        "name": "Watching Anime"
+    },
+    {
+        "id": "6334b650a674ccc2f2bd476c",
+        "picture": "https://i.ibb.co/q9F3Cry/youtube.png",
+        "time": 344,
+        "name": "Watching Youtube"
+    },
+    {
+        "id": "6334b6501dfa427578736524",
+        "picture": "https://i.ibb.co/sq8DyLx/football.jpg",
+        "time": 102,
+        "name": "Watching Football"
+    }
+]
