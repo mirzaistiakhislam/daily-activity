@@ -1,0 +1,85 @@
+.calculate {
+    position: sticky;
+    top: 0;
+    padding-left: 8%;
+}
+
+.add-a-break {
+    width: 75%;
+    height: 60px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+
+.ten-seconds {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    /* padding: 10px; */
+    /* margin-left: 20px; */
+}
+
+.exercise-time {
+    width: 85%;
+    height: 60px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.break-time {
+    width: 85%;
+    height: 60px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.activity-btn {
+    width: 90%;
+    height: 40px;
+    background-color: orangered;
+    border-radius: 5px;
+    margin-top: 20px;
+    color: white;
+}
+
+@media screen and (max-width: 576px) {
+
+    .calculate {
+        padding-left: 0;
+    }
+
+    .add-a-break {
+        width: 100%;
+        padding: 0;
+    }
+
+    .ten-seconds {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        /* padding: 10px; */
+        /* margin-left: 20px; */
+    }
+
+    .activity-btn {
+        width: 100%;
+        /* height: 40px;
+        background-color: orangered;
+        border-radius: 5px;
+        margin-top: 20px;
+        color: white; */
+    }
+
+}

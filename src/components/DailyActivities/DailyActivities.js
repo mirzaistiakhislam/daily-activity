@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Activity from '../Activity/Activity';
+import Calculate from '../Calculate/Calculate';
 import './DailyActivities.css';
 
 const DailyActivities = () => {
 
     const [activities, setActivities] = useState([]);
+    const [calculate, setCalculate] = useState([]);
 
     useEffect(() => {
         fetch('data.json')
@@ -29,7 +31,9 @@ const DailyActivities = () => {
             </div>
 
             <div className='activity-calculate-container'>
-                calculate
+
+
+                <Calculate calculate={calculate}></Calculate>
             </div>
         </div>
     );
