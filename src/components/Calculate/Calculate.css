@@ -5,25 +5,32 @@
     padding-top: 20px;
 }
 
+.profile {
+    display: flex;
+}
+
 .profile-pic img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
 }
 
-.profile {
-    display: flex;
-    /* justify-content: space-betwe; */
-}
-
 .profile-info {
     margin-left: 10px;
+    color: antiquewhite;
+    line-height: 0;
+}
+
+.profile-info span {
+    color: #def2f1;
 }
 
 .description {
     width: 90%;
-    height: 60px;
-    background-color: burlywood;
+    height: 48px;
+    background-color: #2b7a78;
+    border-radius: 5px;
+    margin-top: -10px;
 }
 
 .description h4 {
@@ -31,59 +38,80 @@
     /* margin-top: 1px; */
     padding: 5px;
     text-align: center;
+    color: antiquewhite;
 
 }
 
 .add-a-break {
     width: 75%;
     height: 60px;
-    background-color: aliceblue;
+    background-color: #2b7a78;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px 20px;
     border-radius: 10px;
+
 }
 
-.ten-seconds {
+.header-text {
+    color: antiquewhite;
+}
+
+.seconds {
     width: 35px;
     height: 35px;
     border-radius: 50%;
     /* padding: 10px; */
     /* margin-left: 20px; */
+    cursor: pointer;
+}
+
+.seconds:hover {
+    background-color: orangered;
+    color: antiquewhite;
 }
 
 .exercise-time {
     width: 85%;
     height: 60px;
-    background-color: aliceblue;
+    background-color: #2b7a78;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 4px 10px;
     border-radius: 10px;
-
+    color: antiquewhite;
 }
 
 .break-time {
     width: 85%;
     height: 60px;
-    background-color: aliceblue;
+    background-color: #2b7a78;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px 10px;
     border-radius: 10px;
+    color: antiquewhite;
 }
 
 .activity-btn {
     width: 90%;
     height: 40px;
-    background-color: orangered;
+    background-color: #ffe0b3;
     border-radius: 5px;
     margin-top: 20px;
-    color: white;
+    color: black;
+    cursor: pointer;
 }
+
+.activity-btn:hover {
+    background-color: orangered;
+    color: antiquewhite;
+}
+
+
 
 @media screen and (max-width: 576px) {
 
@@ -124,5 +152,19 @@
         width: 90%;
     }
 
+    .profile {
+        margin-left: 5px;
+    }
+
+    .profile-info {
+        margin-left: 5px;
+    }
+
+    .description {
+        width: 90%;
+        margin-left: 5%;
+        height: 80px;
+        margin-top: -18px;
+    }
 
 }
