@@ -28,8 +28,8 @@ const Calculate = ({ calculation }) => {
         }
     }, [])
 
-    const showingToastWithRoast = () => {
-        toast.success("Sorry Roast is Khotom", {
+    const showingToast = () => {
+        toast.success("Successfully Completed", {
             position: toast.POSITION.TOP_RIGHT
         });
     }
@@ -80,7 +80,7 @@ const Calculate = ({ calculation }) => {
             </div>
 
             <div>
-                <button onClick={showingToastWithRoast} className='activity-btn'><b>Activity Completed</b></button><ToastContainer />
+                <button onClick={showingToast} className='activity-btn'><b>Activity Completed</b></button><ToastContainer />
             </div>
         </div>
     );
