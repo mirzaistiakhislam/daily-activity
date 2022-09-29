@@ -6,13 +6,18 @@ import './DailyActivities.css';
 const DailyActivities = () => {
 
     const [activities, setActivities] = useState([]);
-    // const [calculate, setCalculate] = useState([]);
+    const [calculation, setCalculation] = useState([]);
 
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
             .then(data => setActivities(data))
     }, []);
+
+    const handleAddToCart = (activity) => {
+        const newCalculation = [...calculation, activity];
+        setCalculation(newCalculation);
+    }
 
     return (
         <div className='activity-container'>
@@ -24,14 +29,15 @@ const DailyActivities = () => {
                         activities.map(activity => <Activity
                             key={activity.id}
                             activity={activity}
+                            handleAddToCart={handleAddToCart}
                         ></Activity>)
                     }
                 </div>
-
             </div>
 
             <div className='activity-calculate-container'>
-                <Calculate></Calculate>
+
+                <Calculate calculation={calculation}></Calculate>
             </div>
         </div>
     );

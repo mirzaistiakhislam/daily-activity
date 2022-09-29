@@ -2,19 +2,24 @@ import React, { useEffect, useState } from 'react';
 import { addToLocalStorage, getStoredData } from '../../utilities/localstorage';
 import './Calculate.css';
 
-const Calculate = (props) => {
+const Calculate = ({ calculation }) => {
+
+    // console.log(props);
+    let totalTime = 0;
+    for (const activity of calculation) {
+        totalTime = totalTime + activity.time;
+    }
+
+    // console.log(props);
 
     const [breakTime, setBreakTime] = useState(0);
-    // const [storedBreakTime, setStoredBreakTime] = useState(0);
-
 
     useEffect(() => {
         let storedData = localStorage.getItem('break-time');
         storedData = JSON.parse(storedData);
-        console.log(storedData);
         setBreakTime(storedData);
 
-    }, [breakTime])
+    }, [])
 
     const handleBreakTime = (time) => {
         addToLocalStorage(time);
@@ -44,10 +49,10 @@ const Calculate = (props) => {
             <div>
                 <h3>Exercise Details</h3>
                 <div className='exercise-time'>
-                    <p><b>Exercise time: { }</b> <span>0</span>seconds</p>
+                    <p><b>Exercise time: {totalTime}</b>seconds</p>
                 </div> <br />
                 <div className='break-time'>
-                    <p><b>Break time: {breakTime}</b> <span>0</span>seconds</p>
+                    <p><b>Break time: {breakTime}</b>seconds</p>
                 </div>
             </div>
 

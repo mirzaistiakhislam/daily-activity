@@ -1,9 +1,11 @@
 import React from 'react';
 import './Activity.css';
 
-const Activity = (props) => {
+const Activity = ({ activity, handleAddToCart }) => {
     // console.log(props);
-    const { picture, name, time } = props.activity;
+    // console.log();
+
+    const { picture, name, time } = activity;
     return (
         <div className='activity'>
             <img src={picture} alt="" />
@@ -11,7 +13,7 @@ const Activity = (props) => {
                 <h2>Name: {name}</h2>
                 <p>Time required: <b>{time}s</b></p>
             </div>
-            <button className='btn-list'>Add to list</button>
+            <button onClick={() => handleAddToCart(activity)} className='btn-list'>Add to list</button>
         </div>
     );
 };
