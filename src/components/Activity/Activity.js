@@ -2,7 +2,7 @@ import React from 'react';
 import './Activity.css';
 
 const Activity = (props) => {
-    console.log(props);
+    // console.log(props);
     const { picture, name, time } = props.activity;
     return (
         <div className='activity'>

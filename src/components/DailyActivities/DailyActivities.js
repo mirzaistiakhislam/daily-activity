@@ -6,7 +6,7 @@ import './DailyActivities.css';
 const DailyActivities = () => {
 
     const [activities, setActivities] = useState([]);
-    const [calculate, setCalculate] = useState([]);
+    // const [calculate, setCalculate] = useState([]);
 
     useEffect(() => {
         fetch('data.json')
@@ -31,9 +31,7 @@ const DailyActivities = () => {
             </div>
 
             <div className='activity-calculate-container'>
-
-
-                <Calculate calculate={calculate}></Calculate>
+                <Calculate></Calculate>
             </div>
         </div>
     );
