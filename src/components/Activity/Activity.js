@@ -13,7 +13,7 @@ const Activity = ({ activity, handleAddToCart }) => {
                 <h2>{name}</h2>
                 <p>Time required: <b>{time}s</b></p>
             </div>
-            <button onClick={() => handleAddToCart(activity)} className='btn-list'>Add to list</button>
+            <button onClick={() => handleAddToCart(activity)} className='btn-list'><b>Add to list</b></button>
         </div>
     );
 };
