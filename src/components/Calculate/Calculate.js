@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+// import { ToastContainer } from 'react-toastify/dist/components';
 import { addToLocalStorage, getStoredData } from '../../utilities/localstorage';
 import './Calculate.css';
 
@@ -25,10 +27,21 @@ const Calculate = ({ calculation }) => {
         addToLocalStorage(time);
     }
 
+    const showingToastWithRoast = () => {
+        toast.success("Sorry Roast is Khotom", {
+            position: toast.POSITION.TOP_RIGHT
+        });
+    }
+
     return (
         <div className='calculate'>
             <div>
-                <h3>Add A Break</h3>
+                <div>
+                    <img src="" alt="" />
+                </div>
+            </div>
+            <div>
+                <h3 className='header-text'>Add A Break</h3>
                 <div className='add-a-break'>
                     <button onClick={() => { setBreakTime(10); handleBreakTime(10) }} className='ten-seconds'>
                         10s
@@ -47,7 +60,7 @@ const Calculate = ({ calculation }) => {
             </div>
 
             <div>
-                <h3>Exercise Details</h3>
+                <h3 className='header-text'>Exercise Details</h3>
                 <div className='exercise-time'>
                     <p><b>Exercise time: {totalTime}</b>seconds</p>
                 </div> <br />
@@ -57,7 +70,7 @@ const Calculate = ({ calculation }) => {
             </div>
 
             <div>
-                <button className='activity-btn'>Activity Completed</button>
+                <button onClick={showingToastWithRoast} className='activity-btn'>Activity Completed</button><ToastContainer />
             </div>
         </div>
     );
