@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
+import logo from '../../images/profile.jpg';
 // import { ToastContainer } from 'react-toastify/dist/components';
 import { addToLocalStorage, getStoredData } from '../../utilities/localstorage';
 import './Calculate.css';
@@ -16,16 +17,24 @@ const Calculate = ({ calculation }) => {
 
     const [breakTime, setBreakTime] = useState(0);
 
+
+
+    const handleBreakTime = (time) => {
+        localStorage.setItem('break-time', JSON.stringify(time));
+
+    }
+
     useEffect(() => {
         let storedData = localStorage.getItem('break-time');
         storedData = JSON.parse(storedData);
-        setBreakTime(storedData);
+
+        if (storedData != null) {
+            setBreakTime(storedData);
+        }
+        // console.log(storedData);
+
 
     }, [])
-
-    const handleBreakTime = (time) => {
-        addToLocalStorage(time);
-    }
 
     const showingToastWithRoast = () => {
         toast.success("Sorry Roast is Khotom", {
@@ -36,9 +45,9 @@ const Calculate = ({ calculation }) => {
     return (
         <div className='calculate'>
             <div>
-                <div>
-                    <img src="" alt="" />
-                </div>
+                {/* <div className='profile'>
+                    <img src={logo} alt="" />
+                </div> */}
             </div>
             <div>
                 <h3 className='header-text'>Add A Break</h3>
