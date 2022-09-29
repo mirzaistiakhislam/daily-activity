@@ -28,7 +28,7 @@ const Calculate = ({ calculation }) => {
         let storedData = localStorage.getItem('break-time');
         storedData = JSON.parse(storedData);
 
-        if (storedData != null) {
+        if (storedData !== null) {
             setBreakTime(storedData);
         }
         // console.log(storedData);
@@ -44,11 +44,19 @@ const Calculate = ({ calculation }) => {
 
     return (
         <div className='calculate'>
-            <div>
-                {/* <div className='profile'>
+            <div className='profile'>
+                <div className='profile-pic'>
                     <img src={logo} alt="" />
-                </div> */}
+                </div>
+                <div className='profile-info'>
+                    <p>Mirza Istiakh Islam</p>
+                </div>
             </div>
+
+            <div className='description'>
+                <h4>Front-end Developer</h4>
+            </div>
+
             <div>
                 <h3 className='header-text'>Add A Break</h3>
                 <div className='add-a-break'>
