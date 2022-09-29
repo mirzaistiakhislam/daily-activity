@@ -1,13 +1,23 @@
 .activity-container {
     display: grid;
     grid-template-columns: 3fr 1fr;
+    background-color: #2b7a78;
+}
+
+.headerTwo {
+    padding-left: 50px;
+    color: antiquewhite;
 }
 
 .activity-select-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    margin: 100px 50px;
+    margin: 30px 50px;
+}
+
+.header {
+    padding-left: 50px;
 }
 
 .activity-calculate-container {

@@ -23,7 +23,7 @@ const DailyActivities = () => {
         <div className='activity-container'>
 
             <div>
-                <h2>Select Today's Activities</h2>
+                <h2 className='headerTwo'>Select Today's Activities</h2>
                 <div className='activity-select-container'>
                     {
                         activities.map(activity => <Activity

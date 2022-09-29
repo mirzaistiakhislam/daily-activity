@@ -1,19 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 import logo from '../../images/profile1.jpg';
-// import { ToastContainer } from 'react-toastify/dist/components';
-import { addToLocalStorage, getStoredData } from '../../utilities/localstorage';
 import './Calculate.css';
 
 const Calculate = ({ calculation }) => {
 
-    // console.log(props);
     let totalTime = 0;
     for (const activity of calculation) {
         totalTime = totalTime + activity.time;
     }
-
-    // console.log(props);
 
     const [breakTime, setBreakTime] = useState(0);
 
@@ -31,9 +26,6 @@ const Calculate = ({ calculation }) => {
         if (storedData !== null) {
             setBreakTime(storedData);
         }
-        // console.log(storedData);
-
-
     }, [])
 
     const showingToastWithRoast = () => {

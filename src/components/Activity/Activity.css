@@ -1,16 +1,17 @@
 .activity {
     width: 260px;
-    height: 450px;
+    height: 400px;
     border: 1px solid #95A0A7;
     border-radius: 10px;
     position: relative;
+    background-color: #3aafa9;
 }
 
 .activity img {
-    width: 250px;
+    width: 260px;
     height: 250px;
     border-radius: 10px;
-    margin: 5px;
+    /* margin: 5px; */
 }
 
 .activity-info {
@@ -29,4 +30,10 @@
     bottom: 0;
     background-color: #ffe0b3;
     padding: 10px 0;
+}
+
+.btn-list:hover {
+    cursor: pointer;
+    background-color: orangered;
+    color: antiquewhite;
 }

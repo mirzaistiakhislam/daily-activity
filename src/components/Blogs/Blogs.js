@@ -3,7 +3,7 @@ import './Blogs.css';
 
 const Blogs = () => {
     return (
-        <div>
+        <div className='blogs'>
             <h2 className='blogs-header' >Questions & Answers</h2>
             <div className='QuestionOne'>
                 <h4>How React Works?</h4>

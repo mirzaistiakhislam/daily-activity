@@ -10,7 +10,7 @@ const Activity = ({ activity, handleAddToCart }) => {
         <div className='activity'>
             <img src={picture} alt="" />
             <div className='activity-info'>
-                <h2>Name: {name}</h2>
+                <h2>{name}</h2>
                 <p>Time required: <b>{time}s</b></p>
             </div>
             <button onClick={() => handleAddToCart(activity)} className='btn-list'>Add to list</button>
