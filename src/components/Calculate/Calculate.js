@@ -1,14 +1,22 @@
-import React, { useState } from 'react';
-import { addToLocalStorage } from '../../utilities/localstorage';
-import Break from '../Break/Break';
+import React, { useEffect, useState } from 'react';
+import { addToLocalStorage, getStoredData } from '../../utilities/localstorage';
 import './Calculate.css';
 
 const Calculate = (props) => {
 
     const [breakTime, setBreakTime] = useState(0);
+    // const [storedBreakTime, setStoredBreakTime] = useState(0);
+
+
+    useEffect(() => {
+        let storedData = localStorage.getItem('break-time');
+        storedData = JSON.parse(storedData);
+        console.log(storedData);
+        setBreakTime(storedData);
+
+    }, [breakTime])
 
     const handleBreakTime = (time) => {
-        // console.log(time);
         addToLocalStorage(time);
     }
 
